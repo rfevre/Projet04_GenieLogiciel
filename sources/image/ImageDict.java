@@ -1,3 +1,10 @@
+/*
+Question 4 :
+
+Image Dict sera plus rapide que Image Tab, lorsque l'image sera grande ou comptabilisera un nombre de cases blanches élevè car elles seront ignoré. 
+Les deux méthodes se valent, il faut donc choisir la plus efficace en fonction du nombre de cases blanches et de la taille de l'image.
+ */
+
 package image;
 import dictionnaire.correction.*;
 
@@ -34,7 +41,7 @@ public class ImageDict implements ImageGrise {
     
     /** Fixe le niveau de gris du point de coordonnées (x,y) à la valeur spécifiée */
     public void definirPoint(int x, int y, NiveauGris gris) {
-        if (dict.valeurPour(new Point(x,y))!=NiveauGris.BLANC)
+        if (gris!=NiveauGris.BLANC)
 	    dict.ajouter(new Point(x,y),gris);
     }
     
